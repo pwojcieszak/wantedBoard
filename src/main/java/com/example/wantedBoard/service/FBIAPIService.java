@@ -4,8 +4,6 @@ import com.example.wantedBoard.model.Criminal;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -48,7 +46,6 @@ public class FBIAPIService {
 
             return criminals;
         } catch (JSONException e) {
-            // Obsługa błędu w przypadku nieprawidłowego formatu odpowiedzi JSON
             throw new RuntimeException("Failed to parse response from FBI API", e);
         }
     }
@@ -59,7 +56,6 @@ public class FBIAPIService {
         criminal.setTitle(criminalJson.getString("title"));
         criminal.setCaution(criminalJson.getString("caution"));
         criminal.setDescription(criminalJson.getString("description"));
-        // Ustawianie innych pól w zależności od struktury danych w JSON
 
         return criminal;
     }

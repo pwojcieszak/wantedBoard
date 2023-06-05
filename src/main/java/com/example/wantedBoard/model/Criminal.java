@@ -1,5 +1,7 @@
 package com.example.wantedBoard.model;
 
+import org.springframework.context.annotation.Bean;
+
 import java.io.Serializable;
 
 public class Criminal implements Serializable {
