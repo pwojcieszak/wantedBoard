@@ -23,4 +23,9 @@ public class WantedBoardController {
         model.addAttribute("criminals", wantedBoardService.getAllCriminals());
         return "wanted";
     }
+
+    @GetMapping("/wantedResponse")
+    public ResponseEntity<List<Criminal>> getAllCriminalsResponse(){
+        return new ResponseEntity<>(wantedBoardService.getAllCriminals(), HttpStatus.OK);
+    }
 }

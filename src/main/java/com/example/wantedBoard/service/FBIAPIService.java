@@ -54,7 +54,7 @@ public class FBIAPIService {
         // Tworzenie obiektu Criminal na podstawie danych z JSON
         Criminal criminal = new Criminal();
         criminal.setTitle(criminalJson.getString("title"));
-        criminal.setCaution(criminalJson.getString("caution"));
+        criminal.setImage(criminalJson.getJSONArray("images").getJSONObject(0).getString("original"));
         criminal.setDescription(criminalJson.getString("description"));
 
         return criminal;

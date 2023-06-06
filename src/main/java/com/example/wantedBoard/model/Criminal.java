@@ -1,21 +1,20 @@
 package com.example.wantedBoard.model;
 
-import org.springframework.context.annotation.Bean;
-
 import java.io.Serializable;
 
 public class Criminal implements Serializable {
     private String title;
     private String description;
-    private String caution;
+
+    private String image;
 
     public Criminal() {
     }
 
-    public Criminal(String title, String description, String caution) {
+    public Criminal(String title, String description, String image) {
         this.title = title;
         this.description = description;
-        this.caution = caution;
+        this.image = image;
     }
 
     public String getTitle() {
@@ -34,12 +33,12 @@ public class Criminal implements Serializable {
         this.description = description;
     }
 
-    public String getCaution() {
-        return caution;
+    public String getImage() {
+        return image;
     }
 
-    public void setCaution(String caution) {
-        this.caution = caution;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     @Override
@@ -47,7 +46,7 @@ public class Criminal implements Serializable {
         return "Poster{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", caution='" + caution + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
 }

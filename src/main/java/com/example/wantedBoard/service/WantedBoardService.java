@@ -17,10 +17,7 @@ public class WantedBoardService {
     }
 
     public List<Criminal> getAllCriminals() {
-        // Wywołanie metody serwisu FBIAPIService do pobrania danych o przestępcach
-        List<Criminal> criminals = fbiApiService.fetchCriminals();
-
-        return criminals;
+        return fbiApiService.fetchCriminals();
     }
 
 }
