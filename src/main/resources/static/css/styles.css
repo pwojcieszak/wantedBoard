@@ -1,0 +1,21 @@
+body {
+  overflow-x: hidden;
+}
+
+.image-wood {
+  background: url("../images/wood-g2117678d1_1280.jpg");
+}
+
+.image-poster {
+  background-image: url("../images/wanted-poster.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 3%;
+  padding: 10% 5% 3%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
