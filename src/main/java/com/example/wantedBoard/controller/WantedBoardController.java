@@ -18,7 +18,7 @@ public class WantedBoardController {
         this.wantedBoardService = wantedBoardService;
     }
 
-    @GetMapping("/wanted")
+    @GetMapping()
     public String getAllCriminals(Model model){
         model.addAttribute("criminals", wantedBoardService.getAllCriminals());
         return "wanted";
